@@ -1,0 +1,53 @@
+﻿@model IEnumerable<CashBlockApp.Models.Entities.RecepcionMercancia>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CantidadRecibida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaRecepcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdAlmacenNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdOrdenNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantidadRecibida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaRecepcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdAlmacenNavigation.IdAlmacen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdOrdenNavigation.IdOrden)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdRecepcion">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdRecepcion">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdRecepcion">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

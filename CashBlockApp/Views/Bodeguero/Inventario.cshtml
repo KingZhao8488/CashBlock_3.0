@@ -1,0 +1,81 @@
+﻿@model IEnumerable<dynamic>
+
+@{
+    ViewData["Title"] = "Inventario de Existencias";
+}
+
+<h1>Inventario de Existencias</h1>
+
+@* Mensajes de retroalimentación *@
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["Success"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @TempData["Error"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<p class="lead">
+    Modifique la cantidad en stock directamente en la tabla y haga clic en Guardar.
+</p>
+
+<table class="table table-hover table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Código</th>
+            <th>Nombre del Producto</th>
+            <th>ID Almacén</th>
+            <th>Ubicación</th>
+            <th class="text-center">Cantidad en Stock</th>
+            <th></th> @* Columna para el botón Guardar *@
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            bool stockBajo = item.CantidadDisponible < 10;
+            string rowClass = stockBajo ? "table-warning" : "";
+
+            <tr class="@rowClass">
+                <td>@item.CodigoProducto</td>
+                <td>@item.NombreProducto</td>
+                <td>@item.IdAlmacen</td>
+                <td>@item.UbicacionAlmacen</td>
+
+                <td>
+                    <form asp-controller="Bodeguero" asp-action="GuardarStock" method="post" class="d-flex justify-content-center align-items-center">
+
+                        @* Token de seguridad *@
+                        @Html.AntiForgeryToken()
+
+                        @* Campos Ocultos (Clave Compuesta) que el POST necesita para buscar el registro *@
+                        <input type="hidden" name="IdProducto" value="@item.IdProducto" />
+                        <input type="hidden" name="IdAlmacen" value="@item.IdAlmacen" />
+
+                        @* Campo de Entrada para la Cantidad *@
+                        <input type="number"
+                               name="CantidadAlmacen"
+                               value="@item.CantidadDisponible"
+                               required
+                               min="0"
+                               class="form-control form-control-sm text-center me-2"
+                               style="width: 80px;" />
+
+                        <button type="submit" class="btn btn-sm btn-success" title="Guardar stock">
+                            Guardar
+                        </button>
+                    </form>
+                </td>
+
+                <td></td>
+            </tr>
+        }
+    </tbody>
+</table>

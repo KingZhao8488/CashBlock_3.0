@@ -1,0 +1,40 @@
+﻿@model IEnumerable<CashBlockApp.Models.Entities.Empleado>
+
+@{
+    ViewData["Title"] = "Gestión de Bodegueros";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Crear Nuevo Bodeguero</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.CedulaEmpleado)</th>
+            <th>@Html.DisplayNameFor(model => model.Nombre)</th>
+            <th>@Html.DisplayNameFor(model => model.Apellido)</th>
+            <th>@Html.DisplayNameFor(model => model.Email)</th>
+            <th>@Html.DisplayNameFor(model => model.Salario)</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.CedulaEmpleado)</td>
+                <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
+                <td>@Html.DisplayFor(modelItem => item.Apellido)</td>
+                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                <td>@Html.DisplayFor(modelItem => item.Salario)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.CedulaEmpleado">Editar</a> |
+                    <a asp-action="Delete" asp-route-id="@item.CedulaEmpleado">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

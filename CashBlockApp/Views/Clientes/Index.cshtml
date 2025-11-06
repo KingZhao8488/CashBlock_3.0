@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "Panel de Cliente";
+}
+
+<div class="container mt-4">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h2>Bienvenido, @ViewBag.NombreCliente</h2>
+            <p class="text-muted">Cédula: @ViewBag.CedulaCliente</p>
+        </div>
+    </div>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">@ViewBag.Error</div>
+    }
+
+    <!-- Tarjetas de estadísticas -->
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="card bg-primary text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Total de Compras</h5>
+                    <h2>@ViewBag.TotalCompras</h2>
+                    <p class="card-text">Compras realizadas</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card bg-success text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Total Gastado</h5>
+                    <h2>$@string.Format("{0:N2}", ViewBag.TotalGastado)</h2>
+                    <p class="card-text">En todas tus compras</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menú de acciones -->
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="bi bi-cart" style="font-size: 3rem; color: #0d6efd;"></i>
+                    <h5 class="card-title mt-3">Productos</h5>
+                    <p class="card-text">Explora nuestro catálogo de productos disponibles</p>
+                    <a asp-action="Productos" class="btn btn-primary">Ver Productos</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="bi bi-bag-check" style="font-size: 3rem; color: #198754;"></i>
+                    <h5 class="card-title mt-3">Mis Compras</h5>
+                    <p class="card-text">Revisa el historial de tus compras realizadas</p>
+                    <a asp-action="MisCompras" class="btn btn-success">Ver Historial</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="bi bi-person-circle" style="font-size: 3rem; color: #6c757d;"></i>
+                    <h5 class="card-title mt-3">Mi Perfil</h5>
+                    <p class="card-text">Actualiza tu información personal</p>
+                    <a asp-action="MiPerfil" class="btn btn-secondary">Ver Perfil</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón de cerrar sesión -->
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <a asp-controller="Login" asp-action="Logout" class="btn btn-danger">
+                <i class="bi bi-box-arrow-right"></i> Cerrar Sesión
+            </a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+}

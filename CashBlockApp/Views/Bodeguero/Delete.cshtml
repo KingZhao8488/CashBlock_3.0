@@ -1,0 +1,40 @@
+﻿@model CashBlockApp.Models.Entities.Empleado
+
+@{
+    ViewData["Title"] = "Eliminar Bodeguero";
+}
+
+<h1>Eliminar Bodeguero</h1>
+
+<h3>¿Está seguro de que desea eliminar a este empleado?</h3>
+<div>
+    <h4>@Model.Nombre @Model.Apellido</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.CedulaEmpleado)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.CedulaEmpleado)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Cargo)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Cargo)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        @* Puedes agregar más detalles aquí *@
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="CedulaEmpleado" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-secondary">Volver a la Lista</a>
+    </form>
+</div>

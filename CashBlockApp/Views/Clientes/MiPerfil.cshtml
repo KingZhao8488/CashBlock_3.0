@@ -1,0 +1,91 @@
+﻿@model CashBlockApp.Models.Entities.Cliente
+
+@{
+    ViewData["Title"] = "Mi Perfil";
+}
+
+<div class="container mt-4">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h2>Mi Perfil</h2>
+            <a asp-action="Index" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Volver al Panel
+            </a>
+        </div>
+    </div>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show">
+            <i class="bi bi-check-circle"></i> @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show">
+            <i class="bi bi-exclamation-triangle"></i> @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Información Personal</h5>
+                </div>
+                <div class="card-body">
+                    <form asp-action="MiPerfil" method="post">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label"><strong>Nombre:</strong></label>
+                                <p class="form-control-plaintext">@Model.Nombre</p>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label"><strong>Apellido:</strong></label>
+                                <p class="form-control-plaintext">@Model.Apellido</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label"><strong>Cédula:</strong></label>
+                            <p class="form-control-plaintext">@Model.CedulaCliente</p>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Teléfono</label>
+                            <input asp-for="Telefono" class="form-control" placeholder="Ingrese su teléfono" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Dirección</label>
+                            <input asp-for="Direccion" class="form-control" placeholder="Ingrese su dirección" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input asp-for="Email" type="email" class="form-control" placeholder="Ingrese su email" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label"><strong>Usuario:</strong></label>
+                            <p class="form-control-plaintext">@Model.IdUsuarioNavigation?.NombreUsuario</p>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="bi bi-save"></i> Guardar Cambios
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+}

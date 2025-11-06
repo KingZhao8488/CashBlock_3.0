@@ -1,0 +1,59 @@
+﻿@model IEnumerable<CashBlockApp.Models.Entities.Venta>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalProductos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaVenta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecioTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CedulaClienteNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CedulaEmpleadoNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalProductos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaVenta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CedulaClienteNavigation.CedulaCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CedulaEmpleadoNavigation.CedulaEmpleado)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdVenta">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdVenta">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdVenta">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

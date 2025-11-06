@@ -1,0 +1,296 @@
+﻿@{
+    ViewData["Title"] = "Registrar Nueva Venta";
+}
+
+<div class="container mt-4">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h2>Registrar Nueva Venta</h2>
+            <a asp-action="Index" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Volver al Panel
+            </a>
+        </div>
+    </div>
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show">
+            <i class="bi bi-exclamation-triangle"></i> @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <form asp-action="RegistrarVenta" method="post" id="formVenta">
+        <div class="row">
+            <!-- Selección de Cliente -->
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="bi bi-person"></i> Información del Cliente</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label class="form-label">Cliente <span class="text-danger">*</span></label>
+                            <select name="cedulaCliente" id="clienteSelect" class="form-select" required>
+                                <option value="">Seleccione un cliente...</option>
+                                @if (ViewBag.Clientes != null)
+                                {
+                                    @foreach (var cliente in ViewBag.Clientes)
+                                    {
+                                        <option value="@cliente.CedulaCliente">
+                                            @cliente.Nombre @cliente.Apellido - @cliente.CedulaCliente
+                                        </option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                        <div id="clienteInfo" class="alert alert-info d-none">
+                            <strong>Cliente seleccionado:</strong>
+                            <p class="mb-0" id="clienteNombre"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Método de Pago -->
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0"><i class="bi bi-credit-card"></i> Método de Pago</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label class="form-label">Tipo de Pago <span class="text-danger">*</span></label>
+                            <select name="tipoMetodo" id="tipoMetodo" class="form-select" required>
+                                <option value="">Seleccione...</option>
+                                <option value="Efectivo">Efectivo</option>
+                                <option value="Tarjeta Débito">Tarjeta Débito</option>
+                                <option value="Tarjeta Crédito">Tarjeta Crédito</option>
+                                <option value="Transferencia">Transferencia</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Nombre/Banco</label>
+                            <input type="text" name="nombreMetodo" class="form-control" placeholder="Ej: Bancolombia, Efectivo, etc." />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Productos -->
+        <div class="card mb-4">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0"><i class="bi bi-cart"></i> Productos</h5>
+            </div>
+            <div class="card-body">
+                <div id="productosContainer">
+                    <div class="row producto-item mb-3" data-index="0">
+                        <div class="col-md-5">
+                            <label class="form-label">Producto</label>
+                            <select name="productosIds" class="form-select producto-select" data-index="0" required>
+                                <option value="">Seleccione un producto...</option>
+                                @if (ViewBag.Productos != null)
+                                {
+                                    @foreach (var producto in ViewBag.Productos)
+                                    {
+                                        <option value="@producto.IdProducto" data-precio="@producto.PrecioVenta" data-stock="@producto.CantidadDisponible">
+                                            @producto.Nombre - $@string.Format("{0:N2}", producto.PrecioVenta) (Stock: @producto.CantidadDisponible)
+                                        </option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Cantidad</label>
+                            <input type="number" name="cantidades" class="form-control cantidad-input" min="1" value="1" data-index="0" required />
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Precio Unit.</label>
+                            <input type="text" class="form-control precio-unitario" readonly value="$0.00" />
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Subtotal</label>
+                            <input type="text" class="form-control subtotal" readonly value="$0.00" />
+                        </div>
+                        <div class="col-md-1 d-flex align-items-end">
+                            <button type="button" class="btn btn-danger btn-sm remove-producto" disabled>
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-success" id="btnAgregarProducto">
+                    <i class="bi bi-plus-circle"></i> Agregar Producto
+                </button>
+            </div>
+        </div>
+
+        <!-- Total -->
+        <div class="card mb-4">
+            <div class="card-body bg-light">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Total de Productos: <span id="totalProductos" class="text-primary">0</span></h4>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <h3>Total a Pagar: <span id="totalPagar" class="text-success">$0.00</span></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botones -->
+        <div class="row">
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary btn-lg">
+                    <i class="bi bi-check-circle"></i> Registrar Venta
+                </button>
+                <a asp-action="Index" class="btn btn-secondary btn-lg">
+                    <i class="bi bi-x-circle"></i> Cancelar
+                </a>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <script>
+        $(document).ready(function() {
+            let productoIndex = 1;
+
+            // Calcular totales
+            function calcularTotales() {
+                let totalProductos = 0;
+                let totalPagar = 0;
+
+                $('.producto-item').each(function() {
+                    const cantidad = parseInt($(this).find('.cantidad-input').val()) || 0;
+                    const select = $(this).find('.producto-select');
+                    const precioUnitario = parseFloat(select.find('option:selected').data('precio')) || 0;
+                    const subtotal = cantidad * precioUnitario;
+
+                    $(this).find('.precio-unitario').val('$' + precioUnitario.toFixed(2));
+                    $(this).find('.subtotal').val('$' + subtotal.toFixed(2));
+
+                    if (select.val() && cantidad > 0) {
+                        totalProductos += cantidad;
+                        totalPagar += subtotal;
+                    }
+                });
+
+                $('#totalProductos').text(totalProductos);
+                $('#totalPagar').text('$' + totalPagar.toFixed(2));
+            }
+
+            // Validar stock
+            function validarStock(element) {
+                const cantidad = parseInt($(element).val()) || 0;
+                const select = $(element).closest('.producto-item').find('.producto-select');
+                const stock = parseInt(select.find('option:selected').data('stock')) || 0;
+
+                if (cantidad > stock) {
+                    alert('La cantidad solicitada excede el stock disponible (' + stock + ' unidades)');
+                    $(element).val(stock);
+                }
+            }
+
+            // Cambio en producto
+            $(document).on('change', '.producto-select', function() {
+                calcularTotales();
+            });
+
+            // Cambio en cantidad
+            $(document).on('input', '.cantidad-input', function() {
+                validarStock(this);
+                calcularTotales();
+            });
+
+            // Agregar producto
+            $('#btnAgregarProducto').click(function() {
+                const newRow = `
+                    <div class="row producto-item mb-3" data-index="${productoIndex}">
+                        <div class="col-md-5">
+                            <select name="productosIds" class="form-select producto-select" data-index="${productoIndex}" required>
+                                <option value="">Seleccione un producto...</option>
+                                @if (ViewBag.Productos != null)
+                                {
+                                        @foreach (var producto in ViewBag.Productos)
+                                        {
+                                                <option value="@producto.IdProducto" data-precio="@producto.PrecioVenta" data-stock="@producto.CantidadDisponible">
+                                                    @producto.Nombre - $@string.Format("{0:N2}", producto.PrecioVenta) (Stock: @producto.CantidadDisponible)
+                                                </option>
+                                        }
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <input type="number" name="cantidades" class="form-control cantidad-input" min="1" value="1" data-index="${productoIndex}" required />
+                        </div>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control precio-unitario" readonly value="$0.00" />
+                        </div>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control subtotal" readonly value="$0.00" />
+                        </div>
+                        <div class="col-md-1">
+                            <button type="button" class="btn btn-danger btn-sm remove-producto">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                $('#productosContainer').append(newRow);
+                productoIndex++;
+                actualizarBotonesEliminar();
+            });
+
+            // Eliminar producto
+            $(document).on('click', '.remove-producto', function() {
+                $(this).closest('.producto-item').remove();
+                calcularTotales();
+                actualizarBotonesEliminar();
+            });
+
+            // Actualizar botones de eliminar
+            function actualizarBotonesEliminar() {
+                const count = $('.producto-item').length;
+                if (count === 1) {
+                    $('.remove-producto').prop('disabled', true);
+                } else {
+                    $('.remove-producto').prop('disabled', false);
+                }
+            }
+
+            // Cliente seleccionado
+            $('#clienteSelect').change(function() {
+                const texto = $(this).find('option:selected').text();
+                if ($(this).val()) {
+                    $('#clienteNombre').text(texto);
+                    $('#clienteInfo').removeClass('d-none');
+                } else {
+                    $('#clienteInfo').addClass('d-none');
+                }
+            });
+
+            // Validación del formulario
+            $('#formVenta').submit(function(e) {
+                let hayProductos = false;
+                $('.producto-select').each(function() {
+                    if ($(this).val()) {
+                        hayProductos = true;
+                        return false;
+                    }
+                });
+
+                if (!hayProductos) {
+                    e.preventDefault();
+                    alert('Debe agregar al menos un producto a la venta');
+                    return false;
+                }
+            });
+        });
+    </script>
+}

@@ -1,0 +1,495 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CashBlockApp
+build_property.RootNamespace = CashBlockApp
+build_property.ProjectDir = /home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp
+build_property._RazorSourceGeneratorDebug = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Almacen/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWxtYWNlbi9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Almacen/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWxtYWNlbi9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Almacen/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWxtYWNlbi9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Almacen/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWxtYWNlbi9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Almacen/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWxtYWNlbi9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Bodeguero/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9kZWd1ZXJvL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Bodeguero/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9kZWd1ZXJvL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Bodeguero/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9kZWd1ZXJvL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Bodeguero/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9kZWd1ZXJvL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Bodeguero/Inventario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9kZWd1ZXJvL0ludmVudGFyaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Categorias/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmlhcy9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Categorias/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmlhcy9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Categorias/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmlhcy9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Categorias/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmlhcy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Categorias/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmlhcy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Clientes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xpZW50ZXMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Clientes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xpZW50ZXMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Clientes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xpZW50ZXMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Clientes/DetalleCompra.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xpZW50ZXMvRGV0YWxsZUNvbXByYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Clientes/DetalleCompras.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xpZW50ZXMvRGV0YWxsZUNvbXByYXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Clientes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xpZW50ZXMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Clientes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xpZW50ZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Clientes/MiPerfil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xpZW50ZXMvTWlQZXJmaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Clientes/MisCompras.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xpZW50ZXMvTWlzQ29tcHJhcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Clientes/Productos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xpZW50ZXMvUHJvZHVjdG9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/ClientesAdmin/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xpZW50ZXNBZG1pbi9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/ClientesAdmin/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xpZW50ZXNBZG1pbi9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/ClientesAdmin/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xpZW50ZXNBZG1pbi9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/ClientesAdmin/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xpZW50ZXNBZG1pbi9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/ClientesAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xpZW50ZXNBZG1pbi9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Compras/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tcHJhcy9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Compras/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tcHJhcy9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Compras/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tcHJhcy9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Compras/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tcHJhcy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Compras/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tcHJhcy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Empleados/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1wbGVhZG9zL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Empleados/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1wbGVhZG9zL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Empleados/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1wbGVhZG9zL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Empleados/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1wbGVhZG9zL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Empleados/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1wbGVhZG9zL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Error/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXJyb3IvTm90Rm91bmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Error/ServerError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXJyb3IvU2VydmVyRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Existencias/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXhpc3RlbmNpYXMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Existencias/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXhpc3RlbmNpYXMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Existencias/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXhpc3RlbmNpYXMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Existencias/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXhpc3RlbmNpYXMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Existencias/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXhpc3RlbmNpYXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Facturas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmFjdHVyYXMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Facturas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmFjdHVyYXMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Facturas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmFjdHVyYXMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Facturas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmFjdHVyYXMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Facturas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmFjdHVyYXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Home/AccesoDenegado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BY2Nlc29EZW5lZ2Fkby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9naW4vSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/MetodoPagos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWV0b2RvUGFnb3MvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/MetodoPagos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWV0b2RvUGFnb3MvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/MetodoPagos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWV0b2RvUGFnb3MvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/MetodoPagos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWV0b2RvUGFnb3MvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/MetodoPagos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWV0b2RvUGFnb3MvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/OrdenCompras/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZW5Db21wcmFzL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/OrdenCompras/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZW5Db21wcmFzL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/OrdenCompras/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZW5Db21wcmFzL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/OrdenCompras/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZW5Db21wcmFzL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/OrdenCompras/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZW5Db21wcmFzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Perfiles/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyZmlsZXMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Perfiles/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyZmlsZXMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Perfiles/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyZmlsZXMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Perfiles/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyZmlsZXMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Perfiles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyZmlsZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/ProductoCompras/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdG9Db21wcmFzL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/ProductoCompras/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdG9Db21wcmFzL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/ProductoCompras/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdG9Db21wcmFzL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/ProductoCompras/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdG9Db21wcmFzL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/ProductoCompras/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdG9Db21wcmFzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Productos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdG9zL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Productos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdG9zL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Productos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdG9zL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Productos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdG9zL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Productos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdG9zL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/ProductoVentas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdG9WZW50YXMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/ProductoVentas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdG9WZW50YXMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/ProductoVentas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdG9WZW50YXMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/ProductoVentas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdG9WZW50YXMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/ProductoVentas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdG9WZW50YXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Proveedores/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvdmVlZG9yZXMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Proveedores/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvdmVlZG9yZXMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Proveedores/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvdmVlZG9yZXMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Proveedores/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvdmVlZG9yZXMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Proveedores/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvdmVlZG9yZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/RecepcionMercancias/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVjZXBjaW9uTWVyY2FuY2lhcy9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/RecepcionMercancias/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVjZXBjaW9uTWVyY2FuY2lhcy9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/RecepcionMercancias/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVjZXBjaW9uTWVyY2FuY2lhcy9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/RecepcionMercancias/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVjZXBjaW9uTWVyY2FuY2lhcy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/RecepcionMercancias/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVjZXBjaW9uTWVyY2FuY2lhcy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Usuarios/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXN1YXJpb3MvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Usuarios/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXN1YXJpb3MvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Usuarios/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXN1YXJpb3MvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Usuarios/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXN1YXJpb3MvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Usuarios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXN1YXJpb3MvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Usuarios/Reporte.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXN1YXJpb3MvUmVwb3J0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Vendedor/DetalleVenta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmVuZGVkb3IvRGV0YWxsZVZlbnRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Vendedor/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmVuZGVkb3IvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Vendedor/MisVentas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmVuZGVkb3IvTWlzVmVudGFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Vendedor/NuevaVenta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmVuZGVkb3IvTnVldmFWZW50YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Vendedor/Productos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmVuZGVkb3IvUHJvZHVjdG9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Ventas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmVudGFzL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Ventas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmVudGFzL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Ventas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmVudGFzL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Ventas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmVudGFzL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Ventas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmVudGFzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rhmag/Documents/SENA/-NET/CashBlock_3.0/CashBlockApp/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-wmpiic1pld

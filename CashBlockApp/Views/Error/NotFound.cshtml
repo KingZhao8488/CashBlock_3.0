@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewData["Title"] = "NotFound";
+    Layout = null;
+}
+
+<link href="~/css/NotFound.css" rel="stylesheet" />
+
+
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <div class="error-container">
+        <div class="icono">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
+                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+            </svg>
+        </div>
+        <div class="error-number glitch-text" data-text="404">404</div>
+        <h1 class="error-title">¡Oops! Página no encontrada</h1>
+        <p class="error-message">
+            Lo sentimos, la página que buscas no existe o ha sido movida.
+        </p>
+        <a href="/" class="home-button">
+            <span>← Volver al inicio</span>
+        </a>
+    </div>
+
+    <script>
+        // Añadir efecto de parallax suave al mover el mouse
+        document.addEventListener('mousemove', (e) => {
+            const shapes = document.querySelectorAll('.shape');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+
+            shapes.forEach((shape, index) => {
+                const speed = (index + 1) * 0.5;
+                const xPos = (x - 0.5) * speed * 50;
+                const yPos = (y - 0.5) * speed * 50;
+
+                shape.style.transform += ` translate(${xPos}px, ${yPos}px)`;
+            });
+        });
+
+        // Efecto de tilt en el botón
+        const button = document.querySelector('.home-button');
+        button.addEventListener('mousemove', (e) => {
+            const rect = button.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+
+            const tiltX = (y / rect.height) * 10;
+            const tiltY = (x / rect.width) * -10;
+
+            button.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-3px)`;
+        });
+
+        button.addEventListener('mouseleave', () => {
+            button.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+        });
+    </script>
+
+

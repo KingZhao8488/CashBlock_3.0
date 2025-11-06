@@ -1,0 +1,103 @@
+﻿@model CashBlockApp.Models.Entities.Cliente
+
+@{
+    ViewData["Title"] = "Crear Cliente";
+}
+
+<div class="container mt-4">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h2><i class="bi bi-person-plus"></i> Crear Nuevo Cliente</h2>
+            <a asp-action="Index" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Volver a la Lista
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">Información del Cliente</h5>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create" method="post">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label asp-for="CedulaCliente" class="form-label">Cédula</label>
+                                <input asp-for="CedulaCliente" class="form-control" placeholder="Ingrese la cédula" />
+                                <span asp-validation-for="CedulaCliente" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="IdUsuario" class="form-label">Usuario</label>
+                                <select asp-for="IdUsuario" class="form-select" asp-items="ViewBag.IdUsuario">
+                                    <option value="">-- Seleccione un usuario --</option>
+                                </select>
+                                <span asp-validation-for="IdUsuario" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label asp-for="Nombre" class="form-label">Nombre</label>
+                                <input asp-for="Nombre" class="form-control" placeholder="Ingrese el nombre" />
+                                <span asp-validation-for="Nombre" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Apellido" class="form-label">Apellido</label>
+                                <input asp-for="Apellido" class="form-control" placeholder="Ingrese el apellido" />
+                                <span asp-validation-for="Apellido" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label asp-for="Telefono" class="form-label">Teléfono</label>
+                                <input asp-for="Telefono" class="form-control" placeholder="Ingrese el teléfono" />
+                                <span asp-validation-for="Telefono" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Email" class="form-label">Email</label>
+                                <input asp-for="Email" type="email" class="form-control" placeholder="correo@ejemplo.com" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label asp-for="Direccion" class="form-label">Dirección</label>
+                                <input asp-for="Direccion" class="form-control" placeholder="Ingrese la dirección" />
+                                <span asp-validation-for="Direccion" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="IdPerfiles" class="form-label">Perfil</label>
+                                <select asp-for="IdPerfiles" class="form-select" asp-items="ViewBag.IdPerfiles">
+                                    <option value="">-- Seleccione un perfil --</option>
+                                </select>
+                                <span asp-validation-for="IdPerfiles" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-2 mt-4">
+                            <button type="submit" class="btn btn-success btn-lg">
+                                <i class="bi bi-save"></i> Crear Cliente
+                            </button>
+                            <a asp-action="Index" class="btn btn-secondary">
+                                <i class="bi bi-x-circle"></i> Cancelar
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+}

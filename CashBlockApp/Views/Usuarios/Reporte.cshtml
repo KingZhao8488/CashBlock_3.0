@@ -1,0 +1,60 @@
+﻿@model IEnumerable<CashBlockApp.ViewModels.ReporteUsuarioViewModel>
+@{
+    ViewData["Title"] = "Reporte";
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Reporte de Usuarios y Pedidos</h2>
+
+<p>
+    <a asp-action="ExportarExcel" class="btn btn-success">Exportar a Excel</a>
+</p>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Usuario</th>
+            <th>Rol</th>
+            <th>Total Pedidos/Ventas</th>
+            <th>Productos</th>
+            <th>Monto Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var recorrer in Model)
+        {
+            <tr>
+                <td>@recorrer.NombreUsuario</td>
+                <td>
+                    <span class="badge bg-primary">@recorrer.Rol</span>
+                </td>
+
+                @if (recorrer.TotalPedidos > 0)
+                {
+                    <!-- Es un Cliente -->
+                    <td>@recorrer.TotalPedidos</td>
+                    <td>@recorrer.Productos</td>
+                    <td>@recorrer.MontoTotal.ToString("C")</td>
+                }
+                else if (recorrer.TotalVentas > 0)
+                {
+                    <!-- Es un Vendedor -->
+                    <td>@recorrer.TotalVentas</td>
+                    <td>@recorrer.ProductosVendidos</td>
+                    <td>@recorrer.MontoVendido.ToString("C")</td>
+                }
+                else
+                {
+                    <!-- Sin actividad -->
+                    <td>0</td>
+                    <td class="text-muted">Sin actividad</td>
+                    <td>$0.00</td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <a href="@Url.Action("Logout", "Auth")" class="btn btn-primary">Cerrar sesión</a>
+</div>

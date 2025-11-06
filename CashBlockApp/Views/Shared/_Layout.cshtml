@@ -1,0 +1,220 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+@{
+    var usuarioId = HttpContextAccessor.HttpContext.Session.GetInt32("IdUsuario");
+    var perfilId = HttpContextAccessor.HttpContext.Session.GetInt32("IdPerfiles");
+    var nombreUsuario = HttpContextAccessor.HttpContext.Session.GetString("NombreUsuario");
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CashBlock</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CashBlockApp.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                    <img src="../img/logotipo_cashblock.png" alt="Logo Cashblock" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        @if (usuarioId != null)
+                        {
+                            @if (perfilId == 1) // Administrador
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Home" asp-action="Index">
+                                        <i class="bi bi-house-door"></i> Home
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-gear"></i> Administración
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" asp-controller="Usuarios" asp-action="Index">Usuarios</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Clientes" asp-action="Index">Clientes</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Empleados" asp-action="Index">Empleados</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" asp-controller="Productos" asp-action="Index">Productos</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Categorias" asp-action="Index">Categorías</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Proveedores" asp-action="Index">Proveedores</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" asp-controller="Ventas" asp-action="Index">Ventas</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Compras" asp-action="Index">Compras</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Usuarios" asp-action="Reporte">Reporte Usuarios</a></li>
+
+                                    </ul>
+                                </li>
+                            }
+                            else if (perfilId == 2) // Vendedor
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Vendedor" asp-action="Index">
+                                        <i class="bi bi-speedometer2"></i> Dashboard
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Vendedor" asp-action="NuevaVenta">
+                                        <i class="bi bi-cart-plus"></i> Nueva Venta
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Vendedor" asp-action="Productos">
+                                        <i class="bi bi-box-seam"></i> Productos
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Vendedor" asp-action="MisVentas">
+                                        <i class="bi bi-receipt"></i> Mis Ventas
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Usuarios" asp-action="Reporte">
+                                        <i class="bi bi-people"></i> Reporte Usuarios
+                                    </a>
+                                </li>
+                            }
+                            else if (perfilId == 3) // Bodeguero
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Bodeguero" asp-action="Inventario">
+                                        <i class="bi bi-boxes"></i> Inventario
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Existencias" asp-action="Index">
+                                        <i class="bi bi-clipboard-data"></i> Existencias
+                                    </a>
+                                </li>
+                            }
+                            else if (perfilId == 4) // Cajero
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Home" asp-action="Index">
+                                        <i class="bi bi-cash-register"></i> Caja
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Ventas" asp-action="Index">
+                                        <i class="bi bi-receipt"></i> Ventas
+                                    </a>
+                                </li>
+                            }
+                            else if (perfilId == 5) // Cliente
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Cliente" asp-action="Index">
+                                        <i class="bi bi-house-door"></i> Inicio
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Cliente" asp-action="Productos">
+                                        <i class="bi bi-cart"></i> Productos
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Cliente" asp-action="MisCompras">
+                                        <i class="bi bi-bag-check"></i> Mis Compras
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Cliente" asp-action="MiPerfil">
+                                        <i class="bi bi-person-circle"></i> Mi Perfil
+                                    </a>
+                                </li>
+                            }
+                        }
+                    </ul>
+
+                    <!-- Usuario logueado -->
+                    @if (usuarioId != null)
+                    {
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-person-circle"></i> @nombreUsuario
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                    <li>
+                                        <span class="dropdown-item-text">
+                                            <strong>Rol:</strong>
+                                            @switch (perfilId)
+                                            {
+                                                case 1:
+                                                    <span>Administrador</span>
+                                                    break;
+                                                case 2:
+
+                                                    <span>Vendedor</span>
+                                                    break;
+                                                case 3:
+
+                                                    <span>Bodeguero</span>
+                                                    break;
+                                                case 4:
+
+                                                    <span>Cajero</span>
+                                                    break;
+                                                case 5:
+
+                                                    <span>Cliente</span>
+                                                    break;
+                                                default:
+
+                                                    <span>Usuario</span>
+                                                    break;
+                                            }
+                                        </span>
+                                    </li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li>
+                                        <a class="dropdown-item text-danger" asp-controller="Login" asp-action="Logout">
+                                            <i class="bi bi-box-arrow-right"></i> Cerrar Sesión
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    }
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="d-flex flex-wrap justify-content-around align-items-center py-3 my-4 border-top">
+        <div>
+            &copy; 2025 - CashBlock - Sistema de Gestión de Ventas
+        </div>
+        <div>
+            <a asp-controller="Home" asp-action="Index"><img src="../img/Mesa de trabajo 8.png" alt="" width="110" height="60"></a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,279 @@
+﻿@{
+    ViewData["Title"] = "Panel de Administración";
+}
+
+<div class="container mt-4">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h2>Bienvenido, @ViewBag.NombreUsuario</h2>
+            <p class="text-muted">Rol: @ViewBag.Rol</p>
+        </div>
+    </div>
+
+    @if (ViewBag.PerfilId == 1)
+    {
+        <!-- Dashboard Administrador -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <h4 class="mb-3">Panel de Control - Administrador</h4>
+            </div>
+        </div>
+
+        <!-- Gestión de Usuarios y Personal -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <h5><i class="bi bi-people"></i> Gestión de Usuarios y Personal</h5>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card h-100 border-primary">
+                    <div class="card-body text-center">
+                        <i class="bi bi-person-lock" style="font-size: 2.5rem; color: #0d6efd;"></i>
+                        <h6 class="card-title mt-2">Usuarios</h6>
+                        <p class="card-text small">Gestionar usuarios del sistema</p>
+                        <a asp-controller="Usuarios" asp-action="Index" class="btn btn-sm btn-primary">Acceder</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card h-100 border-info">
+                    <div class="card-body text-center">
+                        <i class="bi bi-person-badge" style="font-size: 2.5rem; color: #0dcaf0;"></i>
+                        <h6 class="card-title mt-2">Empleados</h6>
+                        <p class="card-text small">Administrar empleados</p>
+                        <a asp-controller="Empleados" asp-action="Index" class="btn btn-sm btn-info">Acceder</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card h-100 border-success">
+                    <div class="card-body text-center">
+                        <i class="bi bi-person-check" style="font-size: 2.5rem; color: #198754;"></i>
+                        <h6 class="card-title mt-2">Clientes</h6>
+                        <p class="card-text small">Gestionar clientes</p>
+                        <a asp-controller="ClientesAdmin" asp-action="Index" class="btn btn-sm btn-success">Acceder</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card h-100 border-warning">
+                    <div class="card-body text-center">
+                        <i class="bi bi-shield-check" style="font-size: 2.5rem; color: #ffc107;"></i>
+                        <h6 class="card-title mt-2">Perfiles</h6>
+                        <p class="card-text small">Configurar roles</p>
+                        <a asp-controller="Perfiles" asp-action="Index" class="btn btn-sm btn-warning">Acceder</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card h-100 border-danger">
+                    <div class="card-body text-center">
+                        <i class="bi bi-people" style="font-size: 2.5rem; color: #dc3545;"></i>
+                        <h6 class="card-title mt-2">Reporte Usuarios</h6>
+                        <p class="card-text small">Ver reporte completo de usuarios</p>
+                        <a asp-controller="Usuarios" asp-action="Reporte" class="btn btn-sm btn-danger">Acceder</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <!-- Gestión de Productos e Inventario -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <h5><i class="bi bi-box-seam"></i> Gestión de Productos e Inventario</h5>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card h-100 border-primary">
+                    <div class="card-body text-center">
+                        <i class="bi bi-box" style="font-size: 2.5rem; color: #0d6efd;"></i>
+                        <h6 class="card-title mt-2">Productos</h6>
+                        <p class="card-text small">Administrar productos</p>
+                        <a asp-controller="Productos" asp-action="Index" class="btn btn-sm btn-primary">Acceder</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card h-100 border-info">
+                    <div class="card-body text-center">
+                        <i class="bi bi-tags" style="font-size: 2.5rem; color: #0dcaf0;"></i>
+                        <h6 class="card-title mt-2">Categorías</h6>
+                        <p class="card-text small">Gestionar categorías</p>
+                        <a asp-controller="Categorias" asp-action="Index" class="btn btn-sm btn-info">Acceder</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card h-100 border-success">
+                    <div class="card-body text-center">
+                        <i class="bi bi-building" style="font-size: 2.5rem; color: #198754;"></i>
+                        <h6 class="card-title mt-2">Proveedores</h6>
+                        <p class="card-text small">Gestionar proveedores</p>
+                        <a asp-controller="Proveedores" asp-action="Index" class="btn btn-sm btn-success">Acceder</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card h-100 border-warning">
+                    <div class="card-body text-center">
+                        <i class="bi bi-boxes" style="font-size: 2.5rem; color: #ffc107;"></i>
+                        <h6 class="card-title mt-2">Existencias</h6>
+                        <p class="card-text small">Control de inventario</p>
+                        <a asp-controller="Existencias" asp-action="Index" class="btn btn-sm btn-warning">Acceder</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card h-100 border-secondary">
+                    <div class="card-body text-center">
+                        <i class="bi bi-archive" style="font-size: 2.5rem; color: #6c757d;"></i>
+                        <h6 class="card-title mt-2">Almacenes</h6>
+                        <p class="card-text small">Gestionar almacenes</p>
+                        <a asp-controller="Almacen" asp-action="Index" class="btn btn-sm btn-secondary">Acceder</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <!-- Gestión de Ventas y Compras -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <h5><i class="bi bi-cash-stack"></i> Gestión de Ventas y Compras</h5>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card h-100 border-success">
+                    <div class="card-body text-center">
+                        <i class="bi bi-cart-check" style="font-size: 2.5rem; color: #198754;"></i>
+                        <h6 class="card-title mt-2">Ventas</h6>
+                        <p class="card-text small">Registro de ventas</p>
+                        <a asp-controller="Ventas" asp-action="Index" class="btn btn-sm btn-success">Acceder</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card h-100 border-primary">
+                    <div class="card-body text-center">
+                        <i class="bi bi-receipt" style="font-size: 2.5rem; color: #0d6efd;"></i>
+                        <h6 class="card-title mt-2">Facturas</h6>
+                        <p class="card-text small">Gestionar facturas</p>
+                        <a asp-controller="Facturas" asp-action="Index" class="btn btn-sm btn-primary">Acceder</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card h-100 border-warning">
+                    <div class="card-body text-center">
+                        <i class="bi bi-bag-plus" style="font-size: 2.5rem; color: #ffc107;"></i>
+                        <h6 class="card-title mt-2">Compras</h6>
+                        <p class="card-text small">Registro de compras</p>
+                        <a asp-controller="Compras" asp-action="Index" class="btn btn-sm btn-warning">Acceder</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card h-100 border-info">
+                    <div class="card-body text-center">
+                        <i class="bi bi-credit-card" style="font-size: 2.5rem; color: #0dcaf0;"></i>
+                        <h6 class="card-title mt-2">Métodos de Pago</h6>
+                        <p class="card-text small">Gestionar pagos</p>
+                        <a asp-controller="MetodoPagos" asp-action="Index" class="btn btn-sm btn-info">Acceder</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <!-- Gestión de Compras y Recepción -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <h5><i class="bi bi-truck"></i> Gestión de Compras y Recepción</h5>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card h-100 border-primary">
+                    <div class="card-body text-center">
+                        <i class="bi bi-clipboard-check" style="font-size: 2.5rem; color: #0d6efd;"></i>
+                        <h6 class="card-title mt-2">Órdenes de Compra</h6>
+                        <p class="card-text small">Gestionar órdenes</p>
+                        <a asp-controller="OrdenCompras" asp-action="Index" class="btn btn-sm btn-primary">Acceder</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card h-100 border-success">
+                    <div class="card-body text-center">
+                        <i class="bi bi-inbox" style="font-size: 2.5rem; color: #198754;"></i>
+                        <h6 class="card-title mt-2">Recepción Mercancía</h6>
+                        <p class="card-text small">Recibir productos</p>
+                        <a asp-controller="RecepcionMercancias" asp-action="Index" class="btn btn-sm btn-success">Acceder</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card h-100 border-info">
+                    <div class="card-body text-center">
+                        <i class="bi bi-basket" style="font-size: 2.5rem; color: #0dcaf0;"></i>
+                        <h6 class="card-title mt-2">Producto-Compra</h6>
+                        <p class="card-text small">Detalle de compras</p>
+                        <a asp-controller="ProductoCompras" asp-action="Index" class="btn btn-sm btn-info">Acceder</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card h-100 border-warning">
+                    <div class="card-body text-center">
+                        <i class="bi bi-bag-check" style="font-size: 2.5rem; color: #ffc107;"></i>
+                        <h6 class="card-title mt-2">Producto-Venta</h6>
+                        <p class="card-text small">Detalle de ventas</p>
+                        <a asp-controller="ProductoVentas" asp-action="Index" class="btn btn-sm btn-warning">Acceder</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else if (ViewBag.PerfilId == 4)
+    {
+        <!-- Dashboard Cajero -->
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-cart-check" style="font-size: 3rem; color: #198754;"></i>
+                        <h5 class="card-title mt-3">Ventas</h5>
+                        <p class="card-text">Gestionar ventas</p>
+                        <a asp-controller="Ventas" asp-action="Index" class="btn btn-success">Acceder</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-receipt" style="font-size: 3rem; color: #0d6efd;"></i>
+                        <h5 class="card-title mt-3">Facturas</h5>
+                        <p class="card-text">Ver facturas</p>
+                        <a asp-controller="Facturas" asp-action="Index" class="btn btn-primary">Acceder</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-credit-card" style="font-size: 3rem; color: #ffc107;"></i>
+                        <h5 class="card-title mt-3">Métodos de Pago</h5>
+                        <p class="card-text">Gestionar pagos</p>
+                        <a asp-controller="MetodoPagos" asp-action="Index" class="btn btn-warning">Acceder</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    <!-- Botón de cerrar sesión -->
+    <div class="row mt-5">
+        <div class="col-12 text-center">
+            <a asp-controller="Login" asp-action="Logout" class="btn btn-danger">
+                <i class="bi bi-box-arrow-right"></i> Cerrar Sesión
+            </a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+}
